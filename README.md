@@ -8,6 +8,7 @@ Compatible with tools that load the [Agent Skills](https://skills.sh/) format (f
 
 | Skill | Description |
 | ----- | ----------- |
+| [design-for-change](./design-for-change/) | Data-first design so code stays easy to change: name input/output shapes before behavior, isolate inseparable work, take only necessary responsibility. |
 | [rubber-duck-review](./rubber-duck-review/) | Interactive, conversational review of code changes. Walks through one logical unit at a time, pauses for feedback, then closes the loop with fixes until you are satisfied. |
 
 ## Install
