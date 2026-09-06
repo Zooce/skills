@@ -16,6 +16,9 @@ Compatible with tools that load the [Agent Skills](https://skills.sh/) format (f
 With the [Skills CLI](https://skills.sh/):
 
 ```bash
+# `npx skills` (and awesome tool for this)
+npx skills add Zooce/skills
+
 # Install a single skill
 npx skills add Zooce/skills@rubber-duck-review
 
