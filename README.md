@@ -9,6 +9,7 @@ Compatible with tools that load the [Agent Skills](https://skills.sh/) format (f
 | Skill | Description |
 | ----- | ----------- |
 | [design-for-change](./design-for-change/) | Data-first design so code stays easy to change: name input/output shapes before behavior, isolate inseparable work, take only necessary responsibility. |
+| [explain-change](./explain-change/) | Plain, high-level explanation of a pull request, diff, or commit range for someone with no context: the problem, what changed by behavior, how it works, what it affects, risks, and verification. |
 | [rubber-duck-review](./rubber-duck-review/) | Interactive, conversational review of code changes. Walks through one logical unit at a time, pauses for feedback, then closes the loop with fixes until you are satisfied. |
 
 ## Install
