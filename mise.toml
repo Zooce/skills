@@ -1,0 +1,2 @@
+[tools]
+ols = { version = "latest", rename_exe = { "odinfmt-*" = "odinfmt", "ols-*" = "ols" } }
