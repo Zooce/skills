@@ -12,6 +12,8 @@ Compatible with tools that load the [Agent Skills](https://skills.sh/) format (f
 | [explain-change](./explain-change/) | Plain, high-level explanation of a pull request, diff, or commit range for someone with no context: the problem, what changed by behavior, how it works, what it affects, risks, and verification. |
 | [review](./review/) | Review the current change set. Uses a language server when one is available, does not build or run the project, and sorts findings into Act On, Consider, Notes, and Dismiss. |
 | [rubber-duck-review](./rubber-duck-review/) | Interactive, conversational review of code changes. Walks through one logical unit at a time, pauses for feedback, then closes the loop with fixes until you are satisfied. |
+| [technical-writing](./technical-writing/) | Writing standard for docs, RFCs, READMEs, pull requests, and commit messages. Copied from pstack (Lauren Tan, MIT). |
+| [unslop](./unslop/) | Remove AI tells from writing. Copied from pstack (Lauren Tan, MIT). `technical-writing` applies this skill. |
 
 ## Install
 
@@ -44,3 +46,5 @@ skill-name/
 ## License
 
 [MIT](./LICENSE)
+
+`unslop` and `technical-writing` are unchanged copies from [pstack](https://github.com/backnotprop/pstack) by Lauren Tan (poteto), taken at commit `37d989cabf310ea2d7631f1d006117ca4cc8a799`. Upstream is [cursor/plugins/pstack](https://github.com/cursor/plugins/tree/main/pstack). Copyright (c) 2026 Lauren Tan. Each skill directory has its own `LICENSE` and `ATTRIBUTION.md`, so the notice stays with the skill when it is copied on its own.
