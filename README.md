@@ -8,9 +8,7 @@ Compatible with tools that load the [Agent Skills](https://skills.sh/) format (f
 
 | Skill | Description |
 | ----- | ----------- |
-| [explain-change](./explain-change/) | Plain, high-level explanation of a pull request, diff, or commit range for someone with no context: the problem, what changed by behavior, how it works, what it affects, risks, and verification. |
 | [review](./review/) | Review the current change set. Uses a language server when one is available, does not build or run the project, and sorts findings into Act On, Consider, Notes, and Dismiss. |
-| [rubber-duck-review](./rubber-duck-review/) | Interactive, conversational review of code changes. Walks through one logical unit at a time, pauses for feedback, then closes the loop with fixes until you are satisfied. |
 | [technical-writing](./technical-writing/) | Writing standard for docs, RFCs, READMEs, pull requests, and commit messages. Copied from pstack (Lauren Tan, MIT). |
 | [understand-the-problem](./understand-the-problem/) | Answer what the problem is, including parts you discover, who it affects and why they would care, and whether it is a symptom of a different problem. Look up a goal, a Jira issue, or work in the current project before answering. |
 | [unslop](./unslop/) | Remove AI tells from writing. Copied from pstack (Lauren Tan, MIT). `technical-writing` applies this skill. |
@@ -24,12 +22,12 @@ With the [Skills CLI](https://skills.sh/):
 npx skills add Zooce/skills
 
 # Install a single skill
-npx skills add Zooce/skills@rubber-duck-review
+npx skills add Zooce/skills@review
 
 # Or clone and copy into your agent’s skills directory
 git clone https://github.com/Zooce/skills.git
-cp -r skills/rubber-duck-review ~/.grok/skills/   # Grok (user-wide)
-# cp -r skills/rubber-duck-review .grok/skills/    # Grok (project)
+cp -r skills/review ~/.grok/skills/   # Grok (user-wide)
+# cp -r skills/review .grok/skills/    # Grok (project)
 ```
 
 Exact install paths differ by agent. Check your tool’s docs for where it loads skills from.
