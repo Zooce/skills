@@ -13,6 +13,7 @@ Compatible with tools that load the [Agent Skills](https://skills.sh/) format (f
 | [review](./review/) | Review the current change set. Uses a language server when one is available, does not build or run the project, and sorts findings into Act On, Consider, Notes, and Dismiss. |
 | [rubber-duck-review](./rubber-duck-review/) | Interactive, conversational review of code changes. Walks through one logical unit at a time, pauses for feedback, then closes the loop with fixes until you are satisfied. |
 | [technical-writing](./technical-writing/) | Writing standard for docs, RFCs, READMEs, pull requests, and commit messages. Copied from pstack (Lauren Tan, MIT). |
+| [understand-the-problem](./understand-the-problem/) | Answer what the problem is, including parts you discover, who it affects and why they would care, and whether it is a symptom of a different problem. Look up a goal, a Jira issue, or work in the current project before answering. |
 | [unslop](./unslop/) | Remove AI tells from writing. Copied from pstack (Lauren Tan, MIT). `technical-writing` applies this skill. |
 
 ## Install
