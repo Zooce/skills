@@ -1,0 +1,13 @@
+{
+  "name": "zooce",
+  "description": "Personal agent skills.",
+  "owner": {
+    "name": "Zooce"
+  },
+  "plugins": [
+    {
+      "name": "zooce",
+      "source": "./"
+    }
+  ]
+}

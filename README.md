@@ -1,44 +1,48 @@
-# Skills
+# zooce
 
-Personal collection of agent skills I use and share. Each skill is a self-contained `SKILL.md` that teaches an AI coding agent a specific workflow.
-
-Compatible with tools that load the [Agent Skills](https://skills.sh/) format (for example Grok, Claude Code, Cursor, and others that honor `SKILL.md`).
+Plugin for Grok and Claude Code. It only contains skills for now. Each skill is a `SKILL.md`. The marketplace has the same name.
 
 ## Skills
 
 | Skill | Description |
 | ----- | ----------- |
-| [review](./review/) | Review the current change set. Uses a language server when one is available, does not build or run the project, and sorts findings into Act On, Consider, Notes, and Dismiss. |
-| [technical-writing](./technical-writing/) | Writing standard for docs, RFCs, READMEs, pull requests, and commit messages. Copied from pstack (Lauren Tan, MIT). |
-| [understand-the-problem](./understand-the-problem/) | Answer what the problem is, including parts you discover, who it affects and why they would care, and whether it is a symptom of a different problem. Look up a goal, a Jira issue, or work in the current project before answering. |
-| [unslop](./unslop/) | Remove AI tells from writing. Copied from pstack (Lauren Tan, MIT). `technical-writing` applies this skill. |
+| [review](./skills/review/) | Review the current change set. Uses a language server when one is available, does not build or run the project, and sorts findings into Act On, Consider, Notes, and Dismiss. |
+| [technical-writing](./skills/technical-writing/) | Writing standard for docs, RFCs, READMEs, pull requests, and commit messages. Copied from pstack (Lauren Tan, MIT). |
+| [understand-the-problem](./skills/understand-the-problem/) | Answer what the problem is, including parts you discover, who it affects and why they would care, and whether it is a symptom of a different problem. Look up a goal, a Jira issue, or work in the current project before answering. |
+| [unslop](./skills/unslop/) | Remove AI tells from writing. Copied from pstack (Lauren Tan, MIT). `technical-writing` applies this skill. |
 
 ## Install
 
 With the [Skills CLI](https://skills.sh/):
 
 ```bash
-# `npx skills` (and awesome tool for this)
 npx skills add Zooce/skills
-
-# Install a single skill
 npx skills add Zooce/skills@review
-
-# Or clone and copy into your agent’s skills directory
-git clone https://github.com/Zooce/skills.git
-cp -r skills/review ~/.grok/skills/   # Grok (user-wide)
-# cp -r skills/review .grok/skills/    # Grok (project)
 ```
 
-Exact install paths differ by agent. Check your tool’s docs for where it loads skills from.
+The plugin:
 
-## Skill layout
+```bash
+# Grok
+grok plugin marketplace add Zooce/skills
+grok plugin install zooce --trust
+
+# Claude Code
+claude plugin marketplace add Zooce/skills
+claude plugin install zooce@zooce
+```
+
+## Layout
 
 ```
-skill-name/
-  SKILL.md          # Required: frontmatter (name, description) + instructions
-  scripts/          # Optional: helper scripts
-  references/       # Optional: extra docs the skill may load
+.claude-plugin/
+  plugin.json
+  marketplace.json
+skills/
+  skill-name/
+    SKILL.md
+    scripts/       # optional
+    references/    # optional
 ```
 
 ## License

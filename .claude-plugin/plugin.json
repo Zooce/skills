@@ -1,0 +1,11 @@
+{
+  "name": "zooce",
+  "version": "1.0.0",
+  "description": "Personal skills for review, writing, and understanding a problem.",
+  "author": {
+    "name": "Zooce"
+  },
+  "homepage": "https://github.com/Zooce/skills",
+  "repository": "https://github.com/Zooce/skills",
+  "license": "MIT"
+}
