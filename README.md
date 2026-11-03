@@ -6,7 +6,8 @@ Plugin for Grok and Claude Code. It only contains skills for now. Each skill is 
 
 | Skill | Description |
 | ----- | ----------- |
-| [review](./skills/review/) | Review the current change set. Uses a language server when one is available, does not build or run the project, and sorts findings into Act On, Consider, Notes, and Dismiss. |
+| [code-review](./skills/code-review/) | Review the code in the current change. Uses a language server when one is available, and does not build or run the project. |
+| [writing-review](./skills/writing-review/) | Review docs and other writing. Applies technical-writing. |
 | [technical-writing](./skills/technical-writing/) | Writing standard for docs, RFCs, READMEs, pull requests, and commit messages. Copied from pstack (Lauren Tan, MIT). |
 | [understand-the-problem](./skills/understand-the-problem/) | Answer what the problem is, including parts you discover, who it affects and why they would care, and whether it is a symptom of a different problem. Look up a goal, a Jira issue, or work in the current project before answering. |
 | [unslop](./skills/unslop/) | Remove AI tells from writing. Copied from pstack (Lauren Tan, MIT). `technical-writing` applies this skill. |
@@ -17,7 +18,7 @@ With the [Skills CLI](https://skills.sh/):
 
 ```bash
 npx skills add Zooce/skills
-npx skills add Zooce/skills@review
+npx skills add Zooce/skills@code-review
 ```
 
 The plugin:
