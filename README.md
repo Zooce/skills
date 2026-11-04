@@ -6,6 +6,7 @@ Plugin for Grok and Claude Code. It only contains skills for now. Each skill is 
 
 | Skill | Description |
 | ----- | ----------- |
+| [principles](./skills/principles/) | Make a small safe slice, prove the work, design from the data with no code comments, and keep writing short without dropping meaning. |
 | [code-review](./skills/code-review/) | Review the code in the current change. Uses a language server when one is available, and does not build or run the project. |
 | [writing-review](./skills/writing-review/) | Review docs and other writing. Applies technical-writing. |
 | [technical-writing](./skills/technical-writing/) | Writing standard for docs, RFCs, READMEs, pull requests, and commit messages. Copied from pstack (Lauren Tan, MIT). |
