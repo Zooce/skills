@@ -13,6 +13,7 @@ Plugin for Grok and Claude Code. It only contains skills for now. Each skill is 
 | [understand-the-problem](./skills/understand-the-problem/) | Answer what the problem is, including parts you discover, who it affects and why they would care, and whether it is a symptom of a different problem. Look up a goal, a Jira issue, or work in the current project before answering. |
 | [unslop](./skills/unslop/) | Remove AI tells from writing. Copied from pstack (Lauren Tan, MIT). `technical-writing` applies this skill. |
 | [github-actions-hardening](./skills/github-actions-hardening/) | Audit and harden GitHub Actions workflows: action pinning, token permissions, risky triggers, script injection, and OIDC. |
+| [gh-cli-ci-ops](./skills/gh-cli-ci-ops/) | Use the gh CLI for pull requests, workflow runs, rulesets, and releases. |
 
 ## Install
 
