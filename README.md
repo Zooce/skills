@@ -15,6 +15,7 @@ Plugin for Grok and Claude Code. It only contains skills for now. Each skill is 
 | [github-actions-hardening](./skills/github-actions-hardening/) | Audit and harden GitHub Actions workflows: action pinning, token permissions, risky triggers, script injection, and OIDC. |
 | [gh-cli-ci-ops](./skills/gh-cli-ci-ops/) | Use the gh CLI for pull requests, workflow runs, rulesets, and releases. |
 | [github-rulesets-required-checks](./skills/github-rulesets-required-checks/) | Read, change, and debug rulesets and required status checks, including checks stuck on "Expected". |
+| [dev-tooling-mise](./skills/dev-tooling-mise/) | Set up a repo's tools and tasks with mise so a fresh checkout runs and agents can run every task safely. |
 
 ## Install
 
