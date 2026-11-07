@@ -17,6 +17,7 @@ Plugin for Grok and Claude Code. It only contains skills for now. Each skill is 
 | [github-rulesets-required-checks](./skills/github-rulesets-required-checks/) | Read, change, and debug rulesets and required status checks, including checks stuck on "Expected". |
 | [dev-tooling-mise](./skills/dev-tooling-mise/) | Set up a repo's tools and tasks with mise so a fresh checkout runs and agents can run every task safely. |
 | [ui-review-checklist](./skills/ui-review-checklist/) | Review a user-facing change with evidence from the real UI: states, accessibility, and copy. |
+| [qa-verification](./skills/qa-verification/) | Prove a change works the way a user sees it: behavior tests, minimal repros, test reviews, and deployed checks. |
 
 ## Install
 
