@@ -36,6 +36,10 @@ Do not write a code comment. If the code needs a comment, it is not obvious. Des
 
 Start from the data. Software is data and transformations of that data. A software problem is a data problem.
 
+Code that must change together lives in one place. A caller depends on the result, not on the steps that produce it.
+
+If a caller needs its own copy or its own branch, the shared data is wrong. Change the data. Remove the copy.
+
 Do not invent a problem for a solution. Use a design pattern only when you have the problem it solves now.
 
 ## Writing
