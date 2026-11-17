@@ -16,7 +16,7 @@ Plugin for Grok and Claude Code. It only contains skills for now. Each skill is 
 | [gh-cli-ci-ops](./skills/gh-cli-ci-ops/) | Use the gh CLI for pull requests, workflow runs, rulesets, and releases. |
 | [github-rulesets-required-checks](./skills/github-rulesets-required-checks/) | Read, change, and debug rulesets and required status checks, including checks stuck on "Expected". |
 | [dev-tooling-mise](./skills/dev-tooling-mise/) | Set up a repo's tools and tasks with mise so a fresh checkout runs and agents can run every task safely. |
-| [trust-static-analysis](./skills/trust-static-analysis/) | Add a check that fails on a past mistake and says what to do instead. The static analysis layer of the trust pyramid. |
+| [static-checks](./skills/static-checks/) | Add a check that fails on a past mistake and says what to do instead. |
 | [ui-review-checklist](./skills/ui-review-checklist/) | Review a user-facing change with evidence from the real UI: states, accessibility, and copy. |
 | [qa-verification](./skills/qa-verification/) | Prove a change works the way a user sees it: behavior tests, minimal repros, test reviews, and deployed checks. |
 | [security-review](./skills/security-review/) | Review a change for security risk, credential changes, and leaked secrets. |
