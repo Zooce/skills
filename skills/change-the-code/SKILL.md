@@ -1,14 +1,14 @@
 ---
-name: design-out-problems
+name: change-the-code
 description: >
   Change the code so a failure cannot be written again. Remove the
   choice that allowed it with a data shape, an API, or a boundary, and
   delete every old example an agent could copy. Use when a bug, a
   revert, or a repeated review correction comes from a choice the code
-  should not offer, or when the user runs /zooce:design-out-problems.
+  should not offer, or when the user runs /zooce:change-the-code.
 ---
 
-# Design out problems
+# Change the code
 
 A choice that the code does not offer needs no check, no proof, no rule, and no reviewer.
 
@@ -34,12 +34,12 @@ The change removes the choice. It does one or more of these:
 
 - Changes the data so the bad state has no representation. Give each piece of state one owner.
 - Gives the task one supported API. Make the others private, or delete them.
-- Puts code with different rules in directories whose names say the rule. Enforce the split with `static-checks`.
+- Puts code with different rules in directories whose names say the rule. Enforce the split with `add-check`.
 - Fixes the conflict that the workaround hid, then deletes the workaround.
 
 It also removes every copy of the old way: callers, workarounds, deprecated APIs, dead code, and comments that justify them. Agents copy the nearest example, so one copy left behind becomes the pattern again.
 
-If the old way has too many callers for one small change, block new uses with `static-checks` first. Then move the callers in slices and delete the old way with the last one.
+If the old way has too many callers for one small change, block new uses with `add-check` first. Then move the callers in slices and delete the old way with the last one.
 
 ## Done when
 
