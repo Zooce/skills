@@ -1,19 +1,16 @@
 ---
-name: trust-codebase
+name: design-out-problems
 description: >
   Change the code so a failure cannot be written again. Remove the
   choice that allowed it with a data shape, an API, or a boundary, and
-  delete every old example an agent could copy. The codebase layer of
-  Lauren Tan's trust pyramid. Use when a bug, a revert, or a repeated
-  review correction comes from a choice the code should not offer, or
-  when the user runs /zooce:trust-codebase.
+  delete every old example an agent could copy. Use when a bug, a
+  revert, or a repeated review correction comes from a choice the code
+  should not offer, or when the user runs /zooce:design-out-problems.
 ---
 
-# Codebase layer
+# Design out problems
 
-The codebase is the widest layer of the trust pyramid and the cheapest place to stop a mistake. A choice that the code does not offer needs no check, no proof, no rule, and no reviewer.
-
-Source: Lauren Tan, [All Code Is Slop (Except Mine)](https://www.youtube.com/watch?v=O_zcc6Xl12g), AI Engineer CODE 2026.
+A choice that the code does not offer needs no check, no proof, no rule, and no reviewer.
 
 ## Input
 
@@ -37,12 +34,12 @@ The change removes the choice. It does one or more of these:
 
 - Changes the data so the bad state has no representation. Give each piece of state one owner.
 - Gives the task one supported API. Make the others private, or delete them.
-- Puts code with different rules in directories whose names say the rule. Enforce the split with `trust-static-analysis`.
+- Puts code with different rules in directories whose names say the rule. Enforce the split with `static-checks`.
 - Fixes the conflict that the workaround hid, then deletes the workaround.
 
 It also removes every copy of the old way: callers, workarounds, deprecated APIs, dead code, and comments that justify them. Agents copy the nearest example, so one copy left behind becomes the pattern again.
 
-If the old way has too many callers for one small change, block new uses with `trust-static-analysis` first. Then move the callers in slices and delete the old way with the last one.
+If the old way has too many callers for one small change, block new uses with `static-checks` first. Then move the callers in slices and delete the old way with the last one.
 
 ## Done when
 
@@ -56,4 +53,4 @@ If the old way has too many callers for one small change, block new uses with `t
 - The failure and its link.
 - The choice you removed, and how.
 - The search that shows no copy remains.
-- Anything this layer could not stop, and the layer that takes it next.
+- Anything this change could not stop, and the skill that handles it.
