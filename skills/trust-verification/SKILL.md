@@ -30,19 +30,22 @@ The change adds one proof. Use the cheapest kind that catches the failure.
 - **Property test.** Generated input drives the app or module and checks a rule that must always hold. Use it when one run shows one path and the bug lives in another.
 - **Formal check.** A model checker such as TLA+ checks a state machine in every state, or a proof assistant such as Lean checks an algorithm. Use it when the failure depends on the order of events across parts of a system, or on an edge of an algorithm.
 
-The proof also meets these rules:
+Every proof runs as a mise task, such as `mise run proof:<feature>`, so every agent runs it the same way. If it needs no secrets and runs on a fresh clone, the repo's full check task includes it. If it needs secrets or a deployed environment, it fails closed when they are missing. Follow `dev-tooling-mise`.
 
-- It runs as a mise task, such as `mise run proof:<feature>`, so every agent drives the app the same way. If it needs no secrets and runs on a fresh clone, the repo's full check task includes it. If it needs secrets or a deployed environment, it fails closed when they are missing. Follow `dev-tooling-mise`.
+A runtime proof, and a property test that drives the app, also meets these rules:
+
 - It drives the real user path, not internal setters or test-only endpoints. It checks the side effects as well as the screen.
 - It saves its evidence to a path that it prints, and its cleanup keeps that path.
 - The repo's feature map has an entry for the feature: what it is, how a user reaches it, how to drive it, and what end state proves it works. If the repo has no feature map, start one with this feature.
+
+A formal check, or a property test of one module, does not drive the app. It names the rule it checks, and its output shows the rule holding or the case that breaks it.
 
 ## Done when
 
 - The proof fails on the real past failure. Run it on the commit before the fix, or with the fix reverted, and record the output.
 - The proof passes on the fix.
 - A second run passes with no leftover state from the first.
-- Record the command, the result, the commit SHA, and the evidence path.
+- Record the command, the result, and the commit SHA. For a runtime proof, also record the evidence path.
 
 ## Report
 
