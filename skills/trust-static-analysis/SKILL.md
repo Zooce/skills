@@ -24,7 +24,7 @@ One failure with a link, and the code that allowed it. If `trust-codebase` can r
 
 The change adds one check.
 
-- Use the strongest kind that catches the case. A type or compiler error comes first, then an existing lint rule, then a custom lint or dependency rule, then a test. For a test, follow `qa-verification` section 2.
+- Use the strongest kind that catches the case. A type or compiler error comes first, then an existing lint rule, then a custom lint or dependency rule, then a unit test in the check suite. A test that drives the app the way a user does is a proof for `trust-verification`, not a check for this layer.
 - The error message names the file, function, or API to use instead, in one sentence. The message replaces the comment or rule file line that would otherwise say it.
 - The check runs as a mise task, and the repo's task that runs every check, such as `mise run verify`, includes it. It runs on a fresh clone with no secrets. Follow `dev-tooling-mise`.
 - The change fixes the existing violations. If there are too many for one small change, the check fails only when a change adds a new one, and the change records the current count.
