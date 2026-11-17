@@ -1,31 +1,28 @@
 ---
-name: trust-prose
+name: prose-rules
 description: >
   Write a rule for a decision that needs judgment and that no code,
   check, or proof can enforce, and delete the rules that something else
-  now enforces. Covers AGENTS.md, rule files, and skills. The prose
-  layer of Lauren Tan's trust pyramid. Use when you are about to add a
-  rule after correcting an agent, when a rule file grows, or when the
-  user runs /zooce:trust-prose.
+  now enforces. Covers AGENTS.md, rule files, and skills. Use when you
+  are about to add a rule after correcting an agent, when a rule file
+  grows, or when the user runs /zooce:prose-rules.
 ---
 
-# Prose layer
+# Prose rules
 
-Prose is the fourth layer of the trust pyramid. Nothing fails when an agent skips a rule, so keep prose small. Use it only for decisions that need judgment.
-
-Source: Lauren Tan, [All Code Is Slop (Except Mine)](https://www.youtube.com/watch?v=O_zcc6Xl12g), AI Engineer CODE 2026.
+Nothing fails when an agent skips a rule, so keep prose small. Use it only for decisions that need judgment.
 
 ## Input
 
 A correction you gave an agent, with a link to the failure it corrects.
 
-## Try a higher layer first
+## Try another skill first
 
-Write one sentence for each layer above prose that says why it cannot stop the failure:
+Write one sentence for each of these skills that says why it cannot stop the failure:
 
-- `trust-codebase`: why the code cannot drop the choice.
-- `trust-static-analysis`: why no check can catch it.
-- `trust-verification`: why no proof can show it.
+- `design-out-problems`: why the code cannot drop the choice.
+- `static-checks`: why no check can catch it.
+- `agent-proofs`: why no proof can show it.
 
 If any sentence is weak, use that skill and write no rule.
 
@@ -46,5 +43,5 @@ If any sentence is weak, use that skill and write no rule.
 ## Report
 
 - The rule and its failure link.
-- Why each higher layer could not stop the failure.
+- Why each of those skills could not stop the failure.
 - The rules you deleted, and why.
