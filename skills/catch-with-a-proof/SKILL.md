@@ -4,9 +4,10 @@ description: >
   Add a proof that agents run: a script that drives the running app the
   way a user does and saves evidence, a property-based test, or a formal
   model or proof. The proof fails on the real past failure and runs with
-  one mise command. Use when a bug got past every static check, when a
-  change worked but was not what the user asked for, or when the user
-  runs /zooce:catch-with-a-proof.
+  one mise command. Use when `fix-it-for-good` picks this skill, when
+  you already know the failure needs a proof agents run, or when the
+  user runs /zooce:catch-with-a-proof. A repeated mistake or a
+  correction starts at `fix-it-for-good`.
 ---
 
 # Catch with a proof
@@ -16,6 +17,8 @@ A proof checks what a type, lint, or unit test cannot see: how the running app b
 `qa-verification` proves one change. This skill adds a proof that every later agent runs the same way.
 
 ## Input
+
+Start at `fix-it-for-good` if this is a repeated mistake or a correction and that skill has not already picked this one.
 
 One failure with a link that a type, lint, or unit test did not catch. Examples are a bug seen only in the running app, a rule that broke in one order of events, or a feature built to the wrong idea of the request. If a type, lint, or unit test can catch it, use `catch-it-statically` instead.
 

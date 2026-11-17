@@ -3,9 +3,11 @@ name: design-it-out
 description: >
   Change the code so a failure cannot be written again. Remove the
   choice that allowed it with a data shape, an API, or a boundary, and
-  delete every old example an agent could copy. Use when a bug, a
-  revert, or a repeated review correction comes from a choice the code
-  should not offer, or when the user runs /zooce:design-it-out.
+  delete every old example an agent could copy. Use when
+  `fix-it-for-good` picks this skill, when you already know the failure
+  needs a code change that removes the choice, or when the user runs
+  /zooce:design-it-out. A repeated mistake or a correction starts at
+  `fix-it-for-good`.
 ---
 
 # Design it out
@@ -13,6 +15,8 @@ description: >
 Design for an agent that sees only the files it opened, copies the nearest example, and takes the shortest path that compiles. A choice that the code does not offer needs no check, no proof, no rule, and no reviewer.
 
 ## Input
+
+Start at `fix-it-for-good` if this is a repeated mistake or a correction and that skill has not already picked this one.
 
 One failure with a link: a bug, a revert, an incident, or a review comment that keeps coming back. If there is no link, say so.
 

@@ -4,9 +4,10 @@ description: >
   Write a rule for a decision that needs judgment and that no code,
   check, or proof can enforce, and delete the rules that something else
   now enforces. Keep a table in AGENTS.md that pairs each rule with
-  what enforces it. Use when you are about to add a rule after
-  correcting an agent, when a rule file grows, or when the user runs
-  /zooce:fix-a-judgment.
+  what enforces it. Use when `fix-it-for-good` picks this skill, when
+  you already know the decision needs a judgment rule, when a rule file
+  grows, or when the user runs /zooce:fix-a-judgment. A repeated
+  mistake or a correction starts at `fix-it-for-good`.
 ---
 
 # Fix a judgment
@@ -14,6 +15,8 @@ description: >
 Nothing fails when an agent skips a rule, so keep prose small. Use it only for decisions that need judgment.
 
 ## Input
+
+Start at `fix-it-for-good` if this is a repeated mistake or a correction and that skill has not already picked this one.
 
 A correction you gave an agent, with a link to the failure it corrects.
 
@@ -34,14 +37,14 @@ If the correction repeats a rule in AGENTS.md and the table shows nothing enforc
 - One rule, in the file agents read when they make that decision: the skill for the task, or AGENTS.md for the whole repo. Not a code comment, and not a new Markdown file.
 - The rule names the decision, says what to do, and links the real failure.
 - The rule follows `technical-writing` and `unslop`.
-- A table in AGENTS.md pairs each rule with what enforces it, including rules that live in a skill. Each row names the rule and what enforces it: a code change, a check, a proof, or this rule. Add a row when you add a rule. Drop a row once the mistake cannot happen.
+- A table in AGENTS.md pairs each rule with what enforces it, including rules that live in a skill. Each row names the rule and what enforces it: a code change, a check, a proof, or this rule. Add a row when you add a rule. When a rule moves to a stronger fix, keep the row and name what now enforces it. Drop a row only once the mistake cannot happen.
 - The change deletes the rules in the same file that a check, a type, or a proof now enforces, and names what enforces each one.
 - The change deletes rules that cannot be traced to a real failure, and Markdown that an agent wrote to justify a workaround.
 
 ## Done when
 
 - The new rule has its failure link and the three sentences above, or the change moved an unenforced rule to a stronger fix and updated the table.
-- The AGENTS.md table matches the rules that remain.
+- The AGENTS.md table has a row for every rule whose mistake can still happen, and each row names what enforces it.
 - Each deleted rule is listed with what enforces it now, or why it had no source.
 - `writing-review` on the change has no Act On findings.
 

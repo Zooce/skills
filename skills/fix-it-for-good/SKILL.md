@@ -4,9 +4,9 @@ description: >
   When an agent is corrected or a problem recurs, find the mistake
   types that have happened twice, then apply the strongest skill that
   can stop each one: design it out, catch it statically, catch with a
-  proof, fix a judgment, or learn from review, in that order. Use when an agent repeats a
-  mistake, a bug gets through, a reviewer corrects a change, or the
-  user runs /zooce:fix-it-for-good.
+  proof, fix a judgment, or learn from review, in that order. Use
+  when an agent repeats a mistake, a bug gets through, a reviewer
+  corrects a change, or the user runs /zooce:fix-it-for-good.
 ---
 
 # Fix it for good
@@ -17,7 +17,7 @@ Find the mistake types that keep repeating, then apply the strongest skill that 
 
 Read recent commits, reverts, review comments, agent rules such as AGENTS.md, and comments that explain workarounds. Group the mistakes into types. A type counts once it has happened twice.
 
-If you were pointed at one failure, include it. Count the type if this is the second time it has happened.
+If you were pointed at one failure, and this is the first time that kind of mistake has happened, fix it. Record the failure and the fix. Do not count it as a type until it happens a second time. If it is the second time, count it as a type.
 
 ## Pick the skill
 
@@ -36,6 +36,7 @@ A type can need two skills. For example, a directory split in `design-it-out` ne
 ## Report
 
 - Each mistake type, and the evidence that it happened at least twice.
+- For a first occurrence, the failure, the fix, and where you recorded it. Do not list it as a type.
 - The skill you picked, and why each stronger skill would not work.
 - Any second skill the type also needs, and why.
 - The result of the skill you applied.

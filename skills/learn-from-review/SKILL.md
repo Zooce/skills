@@ -4,9 +4,11 @@ description: >
   Make human review rarer and cheaper. Move each mistake a reviewer
   catches into a code change, a check, a proof, or a written rule, so no
   reviewer catches it twice, and give reviewers evidence of what a
-  change does instead of a diff to read. Use after a reviewer finds a
-  mistake, after review misses one that later breaks, when review is the
-  bottleneck, or when the user runs /zooce:learn-from-review.
+  change does instead of a diff to read. Use when `fix-it-for-good`
+  picks this skill, when you already know a catch should become a
+  lasting change or reviewers need evidence, or when the user runs
+  /zooce:learn-from-review. A repeated mistake or a correction starts
+  at `fix-it-for-good`.
 ---
 
 # Learn from review
@@ -16,6 +18,8 @@ A reviewer who reads every line becomes the limit on how much work ships. Give r
 `code-review` reviews the diff in a change. This skill moves a catch into a lasting change and gives the reviewer evidence.
 
 ## Input
+
+Start at `fix-it-for-good` if this is a repeated mistake or a correction and that skill has not already picked this one.
 
 A finding from a human review with its link, or a merged change that review missed and that later broke.
 
