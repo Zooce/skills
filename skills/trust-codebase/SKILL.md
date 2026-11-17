@@ -1,0 +1,59 @@
+---
+name: trust-codebase
+description: >
+  Change the code so a failure cannot be written again. Remove the
+  choice that allowed it with a data shape, an API, or a boundary, and
+  delete every old example an agent could copy. The codebase layer of
+  Lauren Tan's trust pyramid. Use when a bug, a revert, or a repeated
+  review correction comes from a choice the code should not offer, or
+  when the user runs /zooce:trust-codebase.
+---
+
+# Codebase layer
+
+The codebase is the widest layer of the trust pyramid and the cheapest place to stop a mistake. A choice that the code does not offer needs no check, no proof, no rule, and no reviewer.
+
+Source: Lauren Tan, [All Code Is Slop (Except Mine)](https://www.youtube.com/watch?v=O_zcc6Xl12g), AI Engineer CODE 2026.
+
+## Input
+
+One failure with a link: a bug, a revert, an incident, or a review comment that keeps coming back. If there is no link, say so.
+
+## Name the choice that allowed it
+
+Say which choice the code gave its author and how that choice led to the failure. Common choices:
+
+- Two copies of the same data that drift apart.
+- A data shape that can hold a state the product never wants, such as a loading flag and an error set at the same time.
+- An API that takes judgment to use well, offered everywhere.
+- An import across a module boundary that the design forbids.
+- A workaround that has been copied until it looks like the pattern.
+
+Start from the data, as `principles` says. If a caller needs its own copy or its own branch, the shared data is wrong.
+
+## The finished change
+
+The change removes the choice. It does one or more of these:
+
+- Changes the data so the bad state has no representation. Give each piece of state one owner.
+- Gives the task one supported API. Make the others private, or delete them.
+- Puts code with different rules in directories whose names say the rule. Enforce the split with `trust-static-analysis`.
+- Fixes the conflict that the workaround hid, then deletes the workaround.
+
+It also removes every copy of the old way: callers, workarounds, deprecated APIs, dead code, and comments that justify them. Agents copy the nearest example, so one copy left behind becomes the pattern again.
+
+If the old way has too many callers for one small change, block new uses with `trust-static-analysis` first. Then move the callers in slices and delete the old way with the last one.
+
+## Done when
+
+- The failure from the input cannot be written. Show the attempt and the error it gets, or show that the API or state no longer exists.
+- No copy of the old way remains. Show the search command and its empty result.
+- The repo's full check passes, such as `mise run verify`. Record the command, the result, and the commit SHA.
+- The change adds no code comment.
+
+## Report
+
+- The failure and its link.
+- The choice you removed, and how.
+- The search that shows no copy remains.
+- Anything this layer could not stop, and the layer that takes it next.
