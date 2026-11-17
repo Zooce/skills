@@ -1,15 +1,15 @@
 ---
-name: add-rule
+name: fix-a-judgment
 description: >
   Write a rule for a decision that needs judgment and that no code,
   check, or proof can enforce, and delete the rules that something else
   now enforces. Keep a table in AGENTS.md that pairs each rule with
   what enforces it. Use when you are about to add a rule after
   correcting an agent, when a rule file grows, or when the user runs
-  /zooce:add-rule.
+  /zooce:fix-a-judgment.
 ---
 
-# Add a rule
+# Fix a judgment
 
 Nothing fails when an agent skips a rule, so keep prose small. Use it only for decisions that need judgment.
 
@@ -21,13 +21,13 @@ A correction you gave an agent, with a link to the failure it corrects.
 
 Write one sentence for each of these skills that says why it cannot stop the failure:
 
-- `change-the-code`: why the code cannot drop the choice.
-- `add-check`: why no check can catch it.
-- `add-proof`: why no proof can show it.
+- `design-it-out`: why the code cannot drop the choice.
+- `catch-it-statically`: why no check can catch it.
+- `catch-with-a-proof`: why no proof can show it.
 
 If any sentence is weak, use that skill and write no rule.
 
-If the correction repeats a rule in AGENTS.md and the table shows nothing enforces it, do not write another rule. Apply `change-the-code`, `add-check`, or `add-proof` in the same change, and update the table.
+If the correction repeats a rule in AGENTS.md and the table shows nothing enforces it, do not write another rule. Apply `design-it-out`, `catch-it-statically`, or `catch-with-a-proof` in the same change, and update the table.
 
 ## The finished change
 

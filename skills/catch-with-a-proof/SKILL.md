@@ -1,15 +1,15 @@
 ---
-name: add-proof
+name: catch-with-a-proof
 description: >
   Add a proof that agents run: a script that drives the running app the
   way a user does and saves evidence, a property-based test, or a formal
   model or proof. The proof fails on the real past failure and runs with
   one mise command. Use when a bug got past every static check, when a
   change worked but was not what the user asked for, or when the user
-  runs /zooce:add-proof.
+  runs /zooce:catch-with-a-proof.
 ---
 
-# Add a proof
+# Catch with a proof
 
 A proof checks what a type, lint, or unit test cannot see: how the running app behaves, whether a rule holds across every state, and whether the agent understood what the user asked for.
 
@@ -17,7 +17,7 @@ A proof checks what a type, lint, or unit test cannot see: how the running app b
 
 ## Input
 
-One failure with a link that a type, lint, or unit test did not catch. Examples are a bug seen only in the running app, a rule that broke in one order of events, or a feature built to the wrong idea of the request. If a type, lint, or unit test can catch it, use `add-check` instead.
+One failure with a link that a type, lint, or unit test did not catch. Examples are a bug seen only in the running app, a rule that broke in one order of events, or a feature built to the wrong idea of the request. If a type, lint, or unit test can catch it, use `catch-it-statically` instead.
 
 ## The finished change
 

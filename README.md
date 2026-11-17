@@ -7,12 +7,12 @@ Plugin for Grok and Claude Code. It only contains skills for now. Each skill is 
 | Skill | Description |
 | ----- | ----------- |
 | [principles](./skills/principles/) | Make a small safe slice, prove the work, design from the data with no code comments, and keep writing short without dropping meaning. |
-| [prevent-repeats](./skills/prevent-repeats/) | When an agent is corrected or a problem recurs, find the repeated mistake types and apply the strongest skill that can stop each one. |
-| [change-the-code](./skills/change-the-code/) | Change the code so a failure cannot be written again, and delete the old examples agents would copy. |
-| [add-check](./skills/add-check/) | Add a check that fails on a past mistake and says what to do instead. |
-| [add-proof](./skills/add-proof/) | Add a proof that agents run with one mise command: drive the running app, a property test, or a formal check. |
-| [add-rule](./skills/add-rule/) | Write a rule only for a decision that needs judgment, and delete rules that a check or proof now enforces. |
-| [prep-review](./skills/prep-review/) | Move each reviewer catch into a code change, a check, a proof, or a written rule, and give reviewers evidence instead of a diff. |
+| [fix-it-for-good](./skills/fix-it-for-good/) | When an agent is corrected or a problem recurs, find the repeated mistake types and apply the strongest skill that can stop each one. |
+| [design-it-out](./skills/design-it-out/) | Change the code so a failure cannot be written again, and delete the old examples agents would copy. |
+| [catch-it-statically](./skills/catch-it-statically/) | Add a check that fails on a past mistake and says what to do instead. |
+| [catch-with-a-proof](./skills/catch-with-a-proof/) | Add a proof that agents run with one mise command: drive the running app, a property test, or a formal check. |
+| [fix-a-judgment](./skills/fix-a-judgment/) | Write a rule only for a decision that needs judgment, and delete rules that a check or proof now enforces. |
+| [learn-from-review](./skills/learn-from-review/) | Move each reviewer catch into a code change, a check, a proof, or a written rule, and give reviewers evidence instead of a diff. |
 | [code-review](./skills/code-review/) | Review the code in the current change. Uses a language server when one is available, and does not build or run the project. |
 | [writing-review](./skills/writing-review/) | Review docs and other writing. Applies technical-writing. |
 | [technical-writing](./skills/technical-writing/) | Writing standard for docs, RFCs, READMEs, pull requests, and commit messages. Copied from pstack (Lauren Tan, MIT). |

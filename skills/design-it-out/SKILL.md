@@ -1,14 +1,14 @@
 ---
-name: change-the-code
+name: design-it-out
 description: >
   Change the code so a failure cannot be written again. Remove the
   choice that allowed it with a data shape, an API, or a boundary, and
   delete every old example an agent could copy. Use when a bug, a
   revert, or a repeated review correction comes from a choice the code
-  should not offer, or when the user runs /zooce:change-the-code.
+  should not offer, or when the user runs /zooce:design-it-out.
 ---
 
-# Change the code
+# Design it out
 
 Design for an agent that sees only the files it opened, copies the nearest example, and takes the shortest path that compiles. A choice that the code does not offer needs no check, no proof, no rule, and no reviewer.
 
@@ -34,14 +34,14 @@ The change removes the choice. It does one or more of these:
 
 - Changes the data so the bad state has no representation. Give each piece of state one owner.
 - Gives the task one supported way. Make the others private, or delete them.
-- Hides internals so a wrong import fails. Prefer a language boundary, such as a private or unexported symbol. Use `add-check` when the language cannot enforce it.
+- Hides internals so a wrong import fails. Prefer a language boundary, such as a private or unexported symbol. Use `catch-it-statically` when the language cannot enforce it.
 - Replaces lists that have to be kept in sync by hand with one source of truth.
-- Puts code with different rules in directories whose names say the rule. Enforce the split with `add-check`.
+- Puts code with different rules in directories whose names say the rule. Enforce the split with `catch-it-statically`.
 - Fixes the conflict that the workaround hid, then deletes the workaround.
 
 It also removes every copy of the old way: callers, workarounds, deprecated APIs, dead code, and comments that justify them. Agents copy the nearest example, so one copy left behind becomes the pattern again.
 
-If the old way has too many callers for one small change, block new uses with `add-check` first. Then move the callers in slices and delete the old way with the last one.
+If the old way has too many callers for one small change, block new uses with `catch-it-statically` first. Then move the callers in slices and delete the old way with the last one.
 
 ## Done when
 
