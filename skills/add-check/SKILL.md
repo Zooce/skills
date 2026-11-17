@@ -1,27 +1,27 @@
 ---
-name: static-checks
+name: add-check
 description: >
   Add a deterministic check that catches a mistake the code still
   allows: a type, a compiler setting, a lint rule, a dependency rule, or
   a test. The check fails on the real past mistake, its message says
   what to do instead, and it runs with the repo's other checks. Use when
   an agent repeats a mistake, a review comment repeats, or the user runs
-  /zooce:static-checks.
+  /zooce:add-check.
 ---
 
-# Static checks
+# Add a check
 
 A check gives every change the same answer, whoever wrote it. Its message reaches the agent at the moment the agent breaks the rule. A comment or a rule file cannot do that.
 
 ## Input
 
-One failure with a link, and the code that allowed it. If `design-out-problems` can remove the choice, do that instead. Add a check when the code must keep the choice, such as an API that framework code may use and product code may not.
+One failure with a link, and the code that allowed it. If `change-the-code` can remove the choice, do that instead. Add a check when the code must keep the choice, such as an API that framework code may use and product code may not.
 
 ## The finished change
 
 The change adds one check.
 
-- Use the strongest kind that catches the case. A type or compiler error comes first, then an existing lint rule, then a custom lint or dependency rule, then a unit test in the check suite. A test that drives the app the way a user does belongs to `agent-proofs`, not to this skill.
+- Use the strongest kind that catches the case. A type or compiler error comes first, then an existing lint rule, then a custom lint or dependency rule, then a unit test in the check suite. A test that drives the app the way a user does belongs to `add-proof`, not to this skill.
 - The error message names the file, function, or API to use instead, in one sentence. The message replaces the comment or rule file line that would otherwise say it.
 - The check runs as a mise task, and the repo's task that runs every check, such as `mise run verify`, includes it. It runs on a fresh clone with no secrets. Follow `dev-tooling-mise`.
 - The change fixes the existing violations. If there are too many for one small change, the check fails only when a change adds a new one, and the change records the current count.
