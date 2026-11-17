@@ -12,7 +12,7 @@ Plugin for Grok and Claude Code. It only contains skills for now. Each skill is 
 | [technical-writing](./skills/technical-writing/) | Writing standard for docs, RFCs, READMEs, pull requests, and commit messages. Copied from pstack (Lauren Tan, MIT). |
 | [understand-the-problem](./skills/understand-the-problem/) | Answer what the problem is, including parts you discover, who it affects and why they would care, and whether it is a symptom of a different problem. Look up a goal, a Jira issue, or work in the current project before answering. |
 | [unslop](./skills/unslop/) | Remove AI tells from writing. Copied from pstack (Lauren Tan, MIT). `technical-writing` applies this skill. |
-| [prose-rules](./skills/prose-rules/) | Write a rule only for a decision that needs judgment, and delete rules that a check or proof now enforces. |
+| [add-rule](./skills/add-rule/) | Write a rule only for a decision that needs judgment, and delete rules that a check or proof now enforces. |
 | [github-actions-hardening](./skills/github-actions-hardening/) | Audit and harden GitHub Actions workflows: action pinning, token permissions, risky triggers, script injection, and OIDC. |
 | [gh-cli-ci-ops](./skills/gh-cli-ci-ops/) | Use the gh CLI for pull requests, workflow runs, rulesets, and releases. |
 | [github-rulesets-required-checks](./skills/github-rulesets-required-checks/) | Read, change, and debug rulesets and required status checks, including checks stuck on "Expected". |
